@@ -84,6 +84,51 @@ def collect_all_series(series_dict, start_year, end_year):
     
     return all_data
 
+def load_existing_data(filepath):
+    """Load existing data if file exists"""
+    if os.path.exists(filepath):
+        print(f"Loading existing data from {filepath}...")
+        df = pd.read_csv(filepath)
+        df['date'] = pd.to_datetime(df['date'])
+        print(f"Loaded {len(df)} existing records")
+        return df
+    else:
+        print("No existing data file found. Will create new file.")
+        return pd.DataFrame()
+
+def get_latest_date(df):
+    """Get the latest date in existing data"""
+    if df.empty:
+        return None
+    return df['date'].max()
+
+def append_new_data(existing_df, new_df):
+    """Append only new records to existing data"""
+    if existing_df.empty:
+        return new_df
+    
+    # Get latest date in existing data
+    latest_date = get_latest_date(existing_df)
+    print(f"Latest date in existing data: {latest_date}")
+    
+    # Filter new data to only include records after latest date
+    new_records = new_df[new_df['date'] > latest_date]
+    
+    if len(new_records) == 0:
+        print("No new data to append.")
+        return existing_df
+    
+    print(f"Found {len(new_records)} new records to append")
+    
+    # Combine old and new data
+    combined_df = pd.concat([existing_df, new_records], ignore_index=True)
+    combined_df = combined_df.sort_values('date')
+    
+    # Remove duplicates (just in case)
+    combined_df = combined_df.drop_duplicates(subset=['date', 'series_id'], keep='last')
+    
+    return combined_df
+
 def save_data(df, filepath):
     """Save DataFrame to CSV"""
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
@@ -96,41 +141,57 @@ def save_data(df, filepath):
 
 def main():
     """Main function to collect and save BLS data"""
-    current_year = datetime.now().year
-    start_year = current_year - 1
+    output_path = 'data/processed/labor_stats.csv'
     
     print("="*60)
     print("BLS Labor Statistics Data Collection")
     print("="*60)
-    print(f"Collecting data from {start_year} to {current_year}")
+    
+    # Load existing data
+    existing_df = load_existing_data(output_path)
+    
+    # Determine date range to fetch
+    current_year = datetime.now().year
+    
+    if existing_df.empty:
+        # First run - get last year of data
+        start_year = current_year - 1
+        print(f"First run: Collecting data from {start_year} to {current_year}")
+    else:
+        # Subsequent runs - only get current year
+        latest_date = get_latest_date(existing_df)
+        start_year = latest_date.year if latest_date else current_year - 1
+        print(f"Update run: Collecting data from {start_year} to {current_year}")
+    
     print(f"Using BLS API v1 (no registration key)")
     print("="*60 + "\n")
     
+    # Collect new data
     all_records = collect_all_series(SERIES_IDS, start_year, current_year)
     
     if not all_records:
         print("\n❌ No data collected. Exiting.")
         return
     
-    df = pd.DataFrame(all_records)
-    df['date'] = pd.to_datetime(df['date'])
-    df = df.sort_values('date')
+    # Convert to DataFrame
+    new_df = pd.DataFrame(all_records)
+    new_df['date'] = pd.to_datetime(new_df['date'])
+    new_df = new_df.sort_values('date')
     
-    print("\n" + "="*60)
-    print("Data Preview:")
-    print("="*60)
-    print(df.head(10))
+    # Append to existing data
+    final_df = append_new_data(existing_df, new_df)
     
+    # Display summary
     print("\n" + "="*60)
-    print("Series Summary:")
+    print("Data Summary:")
     print("="*60)
-    summary = df.groupby('series_name').agg({
+    summary = final_df.groupby('series_name').agg({
         'date': ['min', 'max', 'count']
     })
     print(summary)
     
-    output_path = 'data/processed/labor_stats.csv'
-    save_data(df, output_path)
+    # Save data
+    save_data(final_df, output_path)
     
     print("\n✅ Data collection completed successfully!")
 
