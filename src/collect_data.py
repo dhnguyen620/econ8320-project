@@ -155,7 +155,7 @@ def main():
     
     if existing_df.empty:
         # First run - get last year of data
-        start_year = current_year - 1
+        start_year = 2020
         print(f"First run: Collecting data from {start_year} to {current_year}")
     else:
         # Subsequent runs - only get current year

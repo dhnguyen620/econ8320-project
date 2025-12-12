@@ -1,0 +1,484 @@
+date,series_id,series_name,value,year,period,period_name
+2020-01-01,CES6000000001,Professional & Business Services Employment,21476.0,2020,M01,January
+2020-01-01,LNS11300000,Labor Force Participation Rate,63.3,2020,M01,January
+2020-01-01,CES0500000003,Average Hourly Earnings,28.43,2020,M01,January
+2020-01-01,LNS14000000,Unemployment Rate,3.6,2020,M01,January
+2020-01-01,CES3000000001,Manufacturing Employment,12745.0,2020,M01,January
+2020-01-01,CES0000000001,Total Nonfarm Employment,152031.0,2020,M01,January
+2020-01-01,CES7000000001,Leisure & Hospitality Employment,16823.0,2020,M01,January
+2020-02-01,CES0500000003,Average Hourly Earnings,28.54,2020,M02,February
+2020-02-01,LNS11300000,Labor Force Participation Rate,63.3,2020,M02,February
+2020-02-01,CES3000000001,Manufacturing Employment,12743.0,2020,M02,February
+2020-02-01,LNS14000000,Unemployment Rate,3.5,2020,M02,February
+2020-02-01,CES7000000001,Leisure & Hospitality Employment,16889.0,2020,M02,February
+2020-02-01,CES0000000001,Total Nonfarm Employment,152292.0,2020,M02,February
+2020-02-01,CES6000000001,Professional & Business Services Employment,21483.0,2020,M02,February
+2020-03-01,LNS14000000,Unemployment Rate,4.4,2020,M03,March
+2020-03-01,CES0000000001,Total Nonfarm Employment,150895.0,2020,M03,March
+2020-03-01,CES3000000001,Manufacturing Employment,12684.0,2020,M03,March
+2020-03-01,LNS11300000,Labor Force Participation Rate,62.6,2020,M03,March
+2020-03-01,CES6000000001,Professional & Business Services Employment,21388.0,2020,M03,March
+2020-03-01,CES0500000003,Average Hourly Earnings,28.74,2020,M03,March
+2020-03-01,CES7000000001,Leisure & Hospitality Employment,16158.0,2020,M03,March
+2020-04-01,CES0000000001,Total Nonfarm Employment,130424.0,2020,M04,April
+2020-04-01,CES3000000001,Manufacturing Employment,11382.0,2020,M04,April
+2020-04-01,LNS11300000,Labor Force Participation Rate,60.1,2020,M04,April
+2020-04-01,CES0500000003,Average Hourly Earnings,30.04,2020,M04,April
+2020-04-01,CES7000000001,Leisure & Hospitality Employment,8719.0,2020,M04,April
+2020-04-01,LNS14000000,Unemployment Rate,14.8,2020,M04,April
+2020-04-01,CES6000000001,Professional & Business Services Employment,19223.0,2020,M04,April
+2020-05-01,CES3000000001,Manufacturing Employment,11610.0,2020,M05,May
+2020-05-01,LNS14000000,Unemployment Rate,13.2,2020,M05,May
+2020-05-01,CES0000000001,Total Nonfarm Employment,133040.0,2020,M05,May
+2020-05-01,LNS11300000,Labor Force Participation Rate,60.8,2020,M05,May
+2020-05-01,CES0500000003,Average Hourly Earnings,29.72,2020,M05,May
+2020-05-01,CES7000000001,Leisure & Hospitality Employment,9947.0,2020,M05,May
+2020-05-01,CES6000000001,Professional & Business Services Employment,19410.0,2020,M05,May
+2020-06-01,LNS14000000,Unemployment Rate,11.0,2020,M06,June
+2020-06-01,CES6000000001,Professional & Business Services Employment,19768.0,2020,M06,June
+2020-06-01,CES0000000001,Total Nonfarm Employment,137671.0,2020,M06,June
+2020-06-01,CES3000000001,Manufacturing Employment,11950.0,2020,M06,June
+2020-06-01,LNS11300000,Labor Force Participation Rate,61.5,2020,M06,June
+2020-06-01,CES0500000003,Average Hourly Earnings,29.38,2020,M06,June
+2020-06-01,CES7000000001,Leisure & Hospitality Employment,11777.0,2020,M06,June
+2020-07-01,CES0000000001,Total Nonfarm Employment,139255.0,2020,M07,July
+2020-07-01,CES7000000001,Leisure & Hospitality Employment,12415.0,2020,M07,July
+2020-07-01,LNS14000000,Unemployment Rate,10.2,2020,M07,July
+2020-07-01,CES3000000001,Manufacturing Employment,11973.0,2020,M07,July
+2020-07-01,CES0500000003,Average Hourly Earnings,29.39,2020,M07,July
+2020-07-01,LNS11300000,Labor Force Participation Rate,61.5,2020,M07,July
+2020-07-01,CES6000000001,Professional & Business Services Employment,19953.0,2020,M07,July
+2020-08-01,CES7000000001,Leisure & Hospitality Employment,12573.0,2020,M08,August
+2020-08-01,CES3000000001,Manufacturing Employment,11999.0,2020,M08,August
+2020-08-01,CES0000000001,Total Nonfarm Employment,140819.0,2020,M08,August
+2020-08-01,CES6000000001,Professional & Business Services Employment,20147.0,2020,M08,August
+2020-08-01,CES0500000003,Average Hourly Earnings,29.5,2020,M08,August
+2020-08-01,LNS14000000,Unemployment Rate,8.4,2020,M08,August
+2020-08-01,LNS11300000,Labor Force Participation Rate,61.7,2020,M08,August
+2020-09-01,CES3000000001,Manufacturing Employment,12057.0,2020,M09,September
+2020-09-01,CES0500000003,Average Hourly Earnings,29.51,2020,M09,September
+2020-09-01,CES7000000001,Leisure & Hospitality Employment,13065.0,2020,M09,September
+2020-09-01,CES6000000001,Professional & Business Services Employment,20267.0,2020,M09,September
+2020-09-01,CES0000000001,Total Nonfarm Employment,141770.0,2020,M09,September
+2020-09-01,LNS14000000,Unemployment Rate,7.8,2020,M09,September
+2020-09-01,LNS11300000,Labor Force Participation Rate,61.4,2020,M09,September
+2020-10-01,CES6000000001,Professional & Business Services Employment,20455.0,2020,M10,October
+2020-10-01,LNS11300000,Labor Force Participation Rate,61.7,2020,M10,October
+2020-10-01,CES0000000001,Total Nonfarm Employment,142461.0,2020,M10,October
+2020-10-01,CES7000000001,Leisure & Hospitality Employment,13303.0,2020,M10,October
+2020-10-01,CES3000000001,Manufacturing Employment,12086.0,2020,M10,October
+2020-10-01,LNS14000000,Unemployment Rate,6.9,2020,M10,October
+2020-10-01,CES0500000003,Average Hourly Earnings,29.55,2020,M10,October
+2020-11-01,CES7000000001,Leisure & Hospitality Employment,13260.0,2020,M11,November
+2020-11-01,LNS14000000,Unemployment Rate,6.7,2020,M11,November
+2020-11-01,CES0500000003,Average Hourly Earnings,29.64,2020,M11,November
+2020-11-01,CES0000000001,Total Nonfarm Employment,142731.0,2020,M11,November
+2020-11-01,LNS11300000,Labor Force Participation Rate,61.5,2020,M11,November
+2020-11-01,CES6000000001,Professional & Business Services Employment,20602.0,2020,M11,November
+2020-11-01,CES3000000001,Manufacturing Employment,12118.0,2020,M11,November
+2020-12-01,CES6000000001,Professional & Business Services Employment,20770.0,2020,M12,December
+2020-12-01,CES0500000003,Average Hourly Earnings,29.91,2020,M12,December
+2020-12-01,LNS11300000,Labor Force Participation Rate,61.5,2020,M12,December
+2020-12-01,CES3000000001,Manufacturing Employment,12153.0,2020,M12,December
+2020-12-01,LNS14000000,Unemployment Rate,6.7,2020,M12,December
+2020-12-01,CES0000000001,Total Nonfarm Employment,142548.0,2020,M12,December
+2020-12-01,CES7000000001,Leisure & Hospitality Employment,12798.0,2020,M12,December
+2021-01-01,LNS11300000,Labor Force Participation Rate,61.4,2021,M01,January
+2021-01-01,CES0000000001,Total Nonfarm Employment,142913.0,2021,M01,January
+2021-01-01,CES6000000001,Professional & Business Services Employment,20912.0,2021,M01,January
+2021-01-01,LNS14000000,Unemployment Rate,6.4,2021,M01,January
+2021-01-01,CES0500000003,Average Hourly Earnings,29.92,2021,M01,January
+2021-01-01,CES3000000001,Manufacturing Employment,12145.0,2021,M01,January
+2021-01-01,CES7000000001,Leisure & Hospitality Employment,12804.0,2021,M01,January
+2021-02-01,LNS14000000,Unemployment Rate,6.2,2021,M02,February
+2021-02-01,LNS11300000,Labor Force Participation Rate,61.4,2021,M02,February
+2021-02-01,CES7000000001,Leisure & Hospitality Employment,13134.0,2021,M02,February
+2021-02-01,CES6000000001,Professional & Business Services Employment,20988.0,2021,M02,February
+2021-02-01,CES0500000003,Average Hourly Earnings,30.07,2021,M02,February
+2021-02-01,CES3000000001,Manufacturing Employment,12179.0,2021,M02,February
+2021-02-01,CES0000000001,Total Nonfarm Employment,143422.0,2021,M02,February
+2021-03-01,CES0500000003,Average Hourly Earnings,30.04,2021,M03,March
+2021-03-01,CES6000000001,Professional & Business Services Employment,21100.0,2021,M03,March
+2021-03-01,CES7000000001,Leisure & Hospitality Employment,13289.0,2021,M03,March
+2021-03-01,LNS11300000,Labor Force Participation Rate,61.5,2021,M03,March
+2021-03-01,CES0000000001,Total Nonfarm Employment,144246.0,2021,M03,March
+2021-03-01,LNS14000000,Unemployment Rate,6.1,2021,M03,March
+2021-03-01,CES3000000001,Manufacturing Employment,12232.0,2021,M03,March
+2021-04-01,LNS11300000,Labor Force Participation Rate,61.6,2021,M04,April
+2021-04-01,CES3000000001,Manufacturing Employment,12191.0,2021,M04,April
+2021-04-01,CES0500000003,Average Hourly Earnings,30.23,2021,M04,April
+2021-04-01,LNS14000000,Unemployment Rate,6.1,2021,M04,April
+2021-04-01,CES6000000001,Professional & Business Services Employment,21110.0,2021,M04,April
+2021-04-01,CES7000000001,Leisure & Hospitality Employment,13556.0,2021,M04,April
+2021-04-01,CES0000000001,Total Nonfarm Employment,144611.0,2021,M04,April
+2021-05-01,CES0000000001,Total Nonfarm Employment,145032.0,2021,M05,May
+2021-05-01,CES6000000001,Professional & Business Services Employment,21168.0,2021,M05,May
+2021-05-01,CES7000000001,Leisure & Hospitality Employment,13774.0,2021,M05,May
+2021-05-01,CES3000000001,Manufacturing Employment,12219.0,2021,M05,May
+2021-05-01,LNS11300000,Labor Force Participation Rate,61.6,2021,M05,May
+2021-05-01,LNS14000000,Unemployment Rate,5.8,2021,M05,May
+2021-05-01,CES0500000003,Average Hourly Earnings,30.41,2021,M05,May
+2021-06-01,CES6000000001,Professional & Business Services Employment,21258.0,2021,M06,June
+2021-06-01,CES7000000001,Leisure & Hospitality Employment,14081.0,2021,M06,June
+2021-06-01,LNS14000000,Unemployment Rate,5.9,2021,M06,June
+2021-06-01,CES3000000001,Manufacturing Employment,12249.0,2021,M06,June
+2021-06-01,LNS11300000,Labor Force Participation Rate,61.7,2021,M06,June
+2021-06-01,CES0000000001,Total Nonfarm Employment,145828.0,2021,M06,June
+2021-06-01,CES0500000003,Average Hourly Earnings,30.55,2021,M06,June
+2021-07-01,CES3000000001,Manufacturing Employment,12303.0,2021,M07,July
+2021-07-01,CES6000000001,Professional & Business Services Employment,21419.0,2021,M07,July
+2021-07-01,CES7000000001,Leisure & Hospitality Employment,14504.0,2021,M07,July
+2021-07-01,LNS11300000,Labor Force Participation Rate,61.8,2021,M07,July
+2021-07-01,CES0000000001,Total Nonfarm Employment,146759.0,2021,M07,July
+2021-07-01,LNS14000000,Unemployment Rate,5.4,2021,M07,July
+2021-07-01,CES0500000003,Average Hourly Earnings,30.66,2021,M07,July
+2021-08-01,CES0500000003,Average Hourly Earnings,30.79,2021,M08,August
+2021-08-01,CES0000000001,Total Nonfarm Employment,147246.0,2021,M08,August
+2021-08-01,LNS14000000,Unemployment Rate,5.1,2021,M08,August
+2021-08-01,CES6000000001,Professional & Business Services Employment,21530.0,2021,M08,August
+2021-08-01,CES7000000001,Leisure & Hospitality Employment,14610.0,2021,M08,August
+2021-08-01,CES3000000001,Manufacturing Employment,12349.0,2021,M08,August
+2021-08-01,LNS11300000,Labor Force Participation Rate,61.7,2021,M08,August
+2021-09-01,CES7000000001,Leisure & Hospitality Employment,14743.0,2021,M09,September
+2021-09-01,CES3000000001,Manufacturing Employment,12391.0,2021,M09,September
+2021-09-01,CES6000000001,Professional & Business Services Employment,21630.0,2021,M09,September
+2021-09-01,LNS11300000,Labor Force Participation Rate,61.7,2021,M09,September
+2021-09-01,LNS14000000,Unemployment Rate,4.7,2021,M09,September
+2021-09-01,CES0500000003,Average Hourly Earnings,30.96,2021,M09,September
+2021-09-01,CES0000000001,Total Nonfarm Employment,147712.0,2021,M09,September
+2021-10-01,CES6000000001,Professional & Business Services Employment,21879.0,2021,M10,October
+2021-10-01,CES7000000001,Leisure & Hospitality Employment,14955.0,2021,M10,October
+2021-10-01,CES3000000001,Manufacturing Employment,12454.0,2021,M10,October
+2021-10-01,LNS11300000,Labor Force Participation Rate,61.8,2021,M10,October
+2021-10-01,CES0000000001,Total Nonfarm Employment,148569.0,2021,M10,October
+2021-10-01,CES0500000003,Average Hourly Earnings,31.15,2021,M10,October
+2021-10-01,LNS14000000,Unemployment Rate,4.5,2021,M10,October
+2021-11-01,CES6000000001,Professional & Business Services Employment,22026.0,2021,M11,November
+2021-11-01,LNS11300000,Labor Force Participation Rate,61.9,2021,M11,November
+2021-11-01,CES3000000001,Manufacturing Employment,12498.0,2021,M11,November
+2021-11-01,CES0000000001,Total Nonfarm Employment,149206.0,2021,M11,November
+2021-11-01,LNS14000000,Unemployment Rate,4.2,2021,M11,November
+2021-11-01,CES0500000003,Average Hourly Earnings,31.25,2021,M11,November
+2021-11-01,CES7000000001,Leisure & Hospitality Employment,15083.0,2021,M11,November
+2021-12-01,CES3000000001,Manufacturing Employment,12532.0,2021,M12,December
+2021-12-01,LNS11300000,Labor Force Participation Rate,62.0,2021,M12,December
+2021-12-01,CES0000000001,Total Nonfarm Employment,149781.0,2021,M12,December
+2021-12-01,LNS14000000,Unemployment Rate,3.9,2021,M12,December
+2021-12-01,CES0500000003,Average Hourly Earnings,31.41,2021,M12,December
+2021-12-01,CES6000000001,Professional & Business Services Employment,22139.0,2021,M12,December
+2021-12-01,CES7000000001,Leisure & Hospitality Employment,15239.0,2021,M12,December
+2022-01-01,CES7000000001,Leisure & Hospitality Employment,15328.0,2022,M01,January
+2022-01-01,LNS11300000,Labor Force Participation Rate,62.2,2022,M01,January
+2022-01-01,CES0000000001,Total Nonfarm Employment,150006.0,2022,M01,January
+2022-01-01,CES3000000001,Manufacturing Employment,12560.0,2022,M01,January
+2022-01-01,CES6000000001,Professional & Business Services Employment,22198.0,2022,M01,January
+2022-01-01,CES0500000003,Average Hourly Earnings,31.62,2022,M01,January
+2022-01-01,LNS14000000,Unemployment Rate,4.0,2022,M01,January
+2022-02-01,LNS14000000,Unemployment Rate,3.8,2022,M02,February
+2022-02-01,CES7000000001,Leisure & Hospitality Employment,15454.0,2022,M02,February
+2022-02-01,CES3000000001,Manufacturing Employment,12608.0,2022,M02,February
+2022-02-01,CES6000000001,Professional & Business Services Employment,22363.0,2022,M02,February
+2022-02-01,LNS11300000,Labor Force Participation Rate,62.2,2022,M02,February
+2022-02-01,CES0000000001,Total Nonfarm Employment,150875.0,2022,M02,February
+2022-02-01,CES0500000003,Average Hourly Earnings,31.66,2022,M02,February
+2022-03-01,LNS11300000,Labor Force Participation Rate,62.3,2022,M03,March
+2022-03-01,CES3000000001,Manufacturing Employment,12676.0,2022,M03,March
+2022-03-01,CES0000000001,Total Nonfarm Employment,151346.0,2022,M03,March
+2022-03-01,CES0500000003,Average Hourly Earnings,31.82,2022,M03,March
+2022-03-01,CES7000000001,Leisure & Hospitality Employment,15515.0,2022,M03,March
+2022-03-01,CES6000000001,Professional & Business Services Employment,22480.0,2022,M03,March
+2022-03-01,LNS14000000,Unemployment Rate,3.7,2022,M03,March
+2022-04-01,CES0000000001,Total Nonfarm Employment,151651.0,2022,M04,April
+2022-04-01,CES0500000003,Average Hourly Earnings,31.96,2022,M04,April
+2022-04-01,CES6000000001,Professional & Business Services Employment,22479.0,2022,M04,April
+2022-04-01,LNS14000000,Unemployment Rate,3.7,2022,M04,April
+2022-04-01,LNS11300000,Labor Force Participation Rate,62.2,2022,M04,April
+2022-04-01,CES3000000001,Manufacturing Employment,12725.0,2022,M04,April
+2022-04-01,CES7000000001,Leisure & Hospitality Employment,15611.0,2022,M04,April
+2022-05-01,CES3000000001,Manufacturing Employment,12739.0,2022,M05,May
+2022-05-01,CES6000000001,Professional & Business Services Employment,22496.0,2022,M05,May
+2022-05-01,CES7000000001,Leisure & Hospitality Employment,15674.0,2022,M05,May
+2022-05-01,CES0500000003,Average Hourly Earnings,32.1,2022,M05,May
+2022-05-01,LNS11300000,Labor Force Participation Rate,62.3,2022,M05,May
+2022-05-01,CES0000000001,Total Nonfarm Employment,151892.0,2022,M05,May
+2022-05-01,LNS14000000,Unemployment Rate,3.6,2022,M05,May
+2022-06-01,LNS14000000,Unemployment Rate,3.6,2022,M06,June
+2022-06-01,CES3000000001,Manufacturing Employment,12768.0,2022,M06,June
+2022-06-01,CES7000000001,Leisure & Hospitality Employment,15778.0,2022,M06,June
+2022-06-01,CES0000000001,Total Nonfarm Employment,152353.0,2022,M06,June
+2022-06-01,CES6000000001,Professional & Business Services Employment,22559.0,2022,M06,June
+2022-06-01,LNS11300000,Labor Force Participation Rate,62.2,2022,M06,June
+2022-06-01,CES0500000003,Average Hourly Earnings,32.2,2022,M06,June
+2022-07-01,CES7000000001,Leisure & Hospitality Employment,15925.0,2022,M07,July
+2022-07-01,CES0500000003,Average Hourly Earnings,32.35,2022,M07,July
+2022-07-01,LNS14000000,Unemployment Rate,3.5,2022,M07,July
+2022-07-01,CES3000000001,Manufacturing Employment,12800.0,2022,M07,July
+2022-07-01,LNS11300000,Labor Force Participation Rate,62.1,2022,M07,July
+2022-07-01,CES6000000001,Professional & Business Services Employment,22652.0,2022,M07,July
+2022-07-01,CES0000000001,Total Nonfarm Employment,153049.0,2022,M07,July
+2022-08-01,LNS11300000,Labor Force Participation Rate,62.3,2022,M08,August
+2022-08-01,CES3000000001,Manufacturing Employment,12826.0,2022,M08,August
+2022-08-01,CES0500000003,Average Hourly Earnings,32.44,2022,M08,August
+2022-08-01,CES6000000001,Professional & Business Services Employment,22689.0,2022,M08,August
+2022-08-01,CES0000000001,Total Nonfarm Employment,153286.0,2022,M08,August
+2022-08-01,CES7000000001,Leisure & Hospitality Employment,15977.0,2022,M08,August
+2022-08-01,LNS14000000,Unemployment Rate,3.6,2022,M08,August
+2022-09-01,CES0500000003,Average Hourly Earnings,32.55,2022,M09,September
+2022-09-01,CES0000000001,Total Nonfarm Employment,153513.0,2022,M09,September
+2022-09-01,LNS14000000,Unemployment Rate,3.5,2022,M09,September
+2022-09-01,CES3000000001,Manufacturing Employment,12848.0,2022,M09,September
+2022-09-01,CES7000000001,Leisure & Hospitality Employment,16047.0,2022,M09,September
+2022-09-01,CES6000000001,Professional & Business Services Employment,22733.0,2022,M09,September
+2022-09-01,LNS11300000,Labor Force Participation Rate,62.3,2022,M09,September
+2022-10-01,LNS14000000,Unemployment Rate,3.6,2022,M10,October
+2022-10-01,CES7000000001,Leisure & Hospitality Employment,16144.0,2022,M10,October
+2022-10-01,CES0000000001,Total Nonfarm Employment,153913.0,2022,M10,October
+2022-10-01,CES0500000003,Average Hourly Earnings,32.7,2022,M10,October
+2022-10-01,CES6000000001,Professional & Business Services Employment,22784.0,2022,M10,October
+2022-10-01,LNS11300000,Labor Force Participation Rate,62.2,2022,M10,October
+2022-10-01,CES3000000001,Manufacturing Employment,12883.0,2022,M10,October
+2022-11-01,CES6000000001,Professional & Business Services Employment,22797.0,2022,M11,November
+2022-11-01,CES3000000001,Manufacturing Employment,12896.0,2022,M11,November
+2022-11-01,CES7000000001,Leisure & Hospitality Employment,16200.0,2022,M11,November
+2022-11-01,CES0500000003,Average Hourly Earnings,32.84,2022,M11,November
+2022-11-01,LNS14000000,Unemployment Rate,3.6,2022,M11,November
+2022-11-01,CES0000000001,Total Nonfarm Employment,154210.0,2022,M11,November
+2022-11-01,LNS11300000,Labor Force Participation Rate,62.1,2022,M11,November
+2022-12-01,CES0500000003,Average Hourly Earnings,32.96,2022,M12,December
+2022-12-01,CES7000000001,Leisure & Hospitality Employment,16241.0,2022,M12,December
+2022-12-01,LNS14000000,Unemployment Rate,3.5,2022,M12,December
+2022-12-01,LNS11300000,Labor Force Participation Rate,62.3,2022,M12,December
+2022-12-01,CES3000000001,Manufacturing Employment,12889.0,2022,M12,December
+2022-12-01,CES6000000001,Professional & Business Services Employment,22791.0,2022,M12,December
+2022-12-01,CES0000000001,Total Nonfarm Employment,154336.0,2022,M12,December
+2023-01-01,CES7000000001,Leisure & Hospitality Employment,16354.0,2023,M01,January
+2023-01-01,LNS14000000,Unemployment Rate,3.5,2023,M01,January
+2023-01-01,LNS11300000,Labor Force Participation Rate,62.4,2023,M01,January
+2023-01-01,CES3000000001,Manufacturing Employment,12897.0,2023,M01,January
+2023-01-01,CES6000000001,Professional & Business Services Employment,22798.0,2023,M01,January
+2023-01-01,CES0000000001,Total Nonfarm Employment,154780.0,2023,M01,January
+2023-01-01,CES0500000003,Average Hourly Earnings,33.05,2023,M01,January
+2023-02-01,CES6000000001,Professional & Business Services Employment,22838.0,2023,M02,February
+2023-02-01,LNS11300000,Labor Force Participation Rate,62.5,2023,M02,February
+2023-02-01,CES3000000001,Manufacturing Employment,12900.0,2023,M02,February
+2023-02-01,CES0500000003,Average Hourly Earnings,33.16,2023,M02,February
+2023-02-01,CES7000000001,Leisure & Hospitality Employment,16424.0,2023,M02,February
+2023-02-01,CES0000000001,Total Nonfarm Employment,155086.0,2023,M02,February
+2023-02-01,LNS14000000,Unemployment Rate,3.6,2023,M02,February
+2023-03-01,CES6000000001,Professional & Business Services Employment,22834.0,2023,M03,March
+2023-03-01,LNS14000000,Unemployment Rate,3.5,2023,M03,March
+2023-03-01,CES0500000003,Average Hourly Earnings,33.28,2023,M03,March
+2023-03-01,CES7000000001,Leisure & Hospitality Employment,16441.0,2023,M03,March
+2023-03-01,CES0000000001,Total Nonfarm Employment,155171.0,2023,M03,March
+2023-03-01,CES3000000001,Manufacturing Employment,12890.0,2023,M03,March
+2023-03-01,LNS11300000,Labor Force Participation Rate,62.6,2023,M03,March
+2023-04-01,LNS14000000,Unemployment Rate,3.4,2023,M04,April
+2023-04-01,CES7000000001,Leisure & Hospitality Employment,16478.0,2023,M04,April
+2023-04-01,CES3000000001,Manufacturing Employment,12889.0,2023,M04,April
+2023-04-01,LNS11300000,Labor Force Participation Rate,62.6,2023,M04,April
+2023-04-01,CES6000000001,Professional & Business Services Employment,22845.0,2023,M04,April
+2023-04-01,CES0000000001,Total Nonfarm Employment,155387.0,2023,M04,April
+2023-04-01,CES0500000003,Average Hourly Earnings,33.42,2023,M04,April
+2023-05-01,LNS14000000,Unemployment Rate,3.6,2023,M05,May
+2023-05-01,LNS11300000,Labor Force Participation Rate,62.6,2023,M05,May
+2023-05-01,CES0500000003,Average Hourly Earnings,33.52,2023,M05,May
+2023-05-01,CES6000000001,Professional & Business Services Employment,22846.0,2023,M05,May
+2023-05-01,CES0000000001,Total Nonfarm Employment,155614.0,2023,M05,May
+2023-05-01,CES7000000001,Leisure & Hospitality Employment,16505.0,2023,M05,May
+2023-05-01,CES3000000001,Manufacturing Employment,12874.0,2023,M05,May
+2023-06-01,CES3000000001,Manufacturing Employment,12877.0,2023,M06,June
+2023-06-01,CES6000000001,Professional & Business Services Employment,22820.0,2023,M06,June
+2023-06-01,CES0500000003,Average Hourly Earnings,33.69,2023,M06,June
+2023-06-01,LNS11300000,Labor Force Participation Rate,62.6,2023,M06,June
+2023-06-01,CES0000000001,Total Nonfarm Employment,155871.0,2023,M06,June
+2023-06-01,LNS14000000,Unemployment Rate,3.6,2023,M06,June
+2023-06-01,CES7000000001,Leisure & Hospitality Employment,16581.0,2023,M06,June
+2023-07-01,CES3000000001,Manufacturing Employment,12863.0,2023,M07,July
+2023-07-01,LNS11300000,Labor Force Participation Rate,62.6,2023,M07,July
+2023-07-01,CES0500000003,Average Hourly Earnings,33.84,2023,M07,July
+2023-07-01,LNS14000000,Unemployment Rate,3.5,2023,M07,July
+2023-07-01,CES6000000001,Professional & Business Services Employment,22772.0,2023,M07,July
+2023-07-01,CES0000000001,Total Nonfarm Employment,156019.0,2023,M07,July
+2023-07-01,CES7000000001,Leisure & Hospitality Employment,16610.0,2023,M07,July
+2023-08-01,LNS14000000,Unemployment Rate,3.7,2023,M08,August
+2023-08-01,CES3000000001,Manufacturing Employment,12856.0,2023,M08,August
+2023-08-01,CES0500000003,Average Hourly Earnings,33.89,2023,M08,August
+2023-08-01,CES6000000001,Professional & Business Services Employment,22756.0,2023,M08,August
+2023-08-01,CES0000000001,Total Nonfarm Employment,156176.0,2023,M08,August
+2023-08-01,CES7000000001,Leisure & Hospitality Employment,16635.0,2023,M08,August
+2023-08-01,LNS11300000,Labor Force Participation Rate,62.8,2023,M08,August
+2023-09-01,LNS11300000,Labor Force Participation Rate,62.7,2023,M09,September
+2023-09-01,LNS14000000,Unemployment Rate,3.8,2023,M09,September
+2023-09-01,CES7000000001,Leisure & Hospitality Employment,16636.0,2023,M09,September
+2023-09-01,CES0500000003,Average Hourly Earnings,33.99,2023,M09,September
+2023-09-01,CES3000000001,Manufacturing Employment,12869.0,2023,M09,September
+2023-09-01,CES0000000001,Total Nonfarm Employment,156334.0,2023,M09,September
+2023-09-01,CES6000000001,Professional & Business Services Employment,22724.0,2023,M09,September
+2023-10-01,LNS14000000,Unemployment Rate,3.9,2023,M10,October
+2023-10-01,CES7000000001,Leisure & Hospitality Employment,16685.0,2023,M10,October
+2023-10-01,CES0000000001,Total Nonfarm Employment,156520.0,2023,M10,October
+2023-10-01,LNS11300000,Labor Force Participation Rate,62.7,2023,M10,October
+2023-10-01,CES0500000003,Average Hourly Earnings,34.07,2023,M10,October
+2023-10-01,CES6000000001,Professional & Business Services Employment,22706.0,2023,M10,October
+2023-10-01,CES3000000001,Manufacturing Employment,12836.0,2023,M10,October
+2023-11-01,LNS11300000,Labor Force Participation Rate,62.8,2023,M11,November
+2023-11-01,CES0500000003,Average Hourly Earnings,34.19,2023,M11,November
+2023-11-01,CES0000000001,Total Nonfarm Employment,156661.0,2023,M11,November
+2023-11-01,CES7000000001,Leisure & Hospitality Employment,16724.0,2023,M11,November
+2023-11-01,CES3000000001,Manufacturing Employment,12858.0,2023,M11,November
+2023-11-01,CES6000000001,Professional & Business Services Employment,22659.0,2023,M11,November
+2023-11-01,LNS14000000,Unemployment Rate,3.7,2023,M11,November
+2023-12-01,CES0000000001,Total Nonfarm Employment,156930.0,2023,M12,December
+2023-12-01,CES0500000003,Average Hourly Earnings,34.31,2023,M12,December
+2023-12-01,CES3000000001,Manufacturing Employment,12865.0,2023,M12,December
+2023-12-01,CES6000000001,Professional & Business Services Employment,22664.0,2023,M12,December
+2023-12-01,LNS11300000,Labor Force Participation Rate,62.5,2023,M12,December
+2023-12-01,LNS14000000,Unemployment Rate,3.8,2023,M12,December
+2023-12-01,CES7000000001,Leisure & Hospitality Employment,16728.0,2023,M12,December
+2024-01-01,CES6000000001,Professional & Business Services Employment,22667.0,2024,M01,January
+2024-01-01,LNS14000000,Unemployment Rate,3.7,2024,M01,January
+2024-01-01,CES0000000001,Total Nonfarm Employment,157049.0,2024,M01,January
+2024-01-01,LNS11300000,Labor Force Participation Rate,62.5,2024,M01,January
+2024-01-01,CES7000000001,Leisure & Hospitality Employment,16720.0,2024,M01,January
+2024-01-01,CES3000000001,Manufacturing Employment,12866.0,2024,M01,January
+2024-01-01,CES0500000003,Average Hourly Earnings,34.47,2024,M01,January
+2024-02-01,CES7000000001,Leisure & Hospitality Employment,16735.0,2024,M02,February
+2024-02-01,CES0500000003,Average Hourly Earnings,34.54,2024,M02,February
+2024-02-01,CES0000000001,Total Nonfarm Employment,157271.0,2024,M02,February
+2024-02-01,LNS14000000,Unemployment Rate,3.9,2024,M02,February
+2024-02-01,LNS11300000,Labor Force Participation Rate,62.6,2024,M02,February
+2024-02-01,CES3000000001,Manufacturing Employment,12853.0,2024,M02,February
+2024-02-01,CES6000000001,Professional & Business Services Employment,22661.0,2024,M02,February
+2024-03-01,CES0500000003,Average Hourly Earnings,34.67,2024,M03,March
+2024-03-01,CES0000000001,Total Nonfarm Employment,157517.0,2024,M03,March
+2024-03-01,CES3000000001,Manufacturing Employment,12838.0,2024,M03,March
+2024-03-01,LNS14000000,Unemployment Rate,3.9,2024,M03,March
+2024-03-01,LNS11300000,Labor Force Participation Rate,62.7,2024,M03,March
+2024-03-01,CES7000000001,Leisure & Hospitality Employment,16772.0,2024,M03,March
+2024-03-01,CES6000000001,Professional & Business Services Employment,22637.0,2024,M03,March
+2024-04-01,CES0000000001,Total Nonfarm Employment,157635.0,2024,M04,April
+2024-04-01,CES6000000001,Professional & Business Services Employment,22645.0,2024,M04,April
+2024-04-01,LNS14000000,Unemployment Rate,3.9,2024,M04,April
+2024-04-01,CES7000000001,Leisure & Hospitality Employment,16768.0,2024,M04,April
+2024-04-01,CES3000000001,Manufacturing Employment,12847.0,2024,M04,April
+2024-04-01,LNS11300000,Labor Force Participation Rate,62.7,2024,M04,April
+2024-04-01,CES0500000003,Average Hourly Earnings,34.75,2024,M04,April
+2024-05-01,CES6000000001,Professional & Business Services Employment,22656.0,2024,M05,May
+2024-05-01,CES3000000001,Manufacturing Employment,12849.0,2024,M05,May
+2024-05-01,LNS14000000,Unemployment Rate,4.0,2024,M05,May
+2024-05-01,LNS11300000,Labor Force Participation Rate,62.6,2024,M05,May
+2024-05-01,CES0500000003,Average Hourly Earnings,34.89,2024,M05,May
+2024-05-01,CES0000000001,Total Nonfarm Employment,157828.0,2024,M05,May
+2024-05-01,CES7000000001,Leisure & Hospitality Employment,16791.0,2024,M05,May
+2024-06-01,CES6000000001,Professional & Business Services Employment,22639.0,2024,M06,June
+2024-06-01,LNS11300000,Labor Force Participation Rate,62.6,2024,M06,June
+2024-06-01,CES7000000001,Leisure & Hospitality Employment,16783.0,2024,M06,June
+2024-06-01,LNS14000000,Unemployment Rate,4.1,2024,M06,June
+2024-06-01,CES0000000001,Total Nonfarm Employment,157915.0,2024,M06,June
+2024-06-01,CES0500000003,Average Hourly Earnings,35.0,2024,M06,June
+2024-06-01,CES3000000001,Manufacturing Employment,12839.0,2024,M06,June
+2024-07-01,LNS11300000,Labor Force Participation Rate,62.7,2024,M07,July
+2024-07-01,LNS14000000,Unemployment Rate,4.2,2024,M07,July
+2024-07-01,CES0500000003,Average Hourly Earnings,35.07,2024,M07,July
+2024-07-01,CES7000000001,Leisure & Hospitality Employment,16792.0,2024,M07,July
+2024-07-01,CES0000000001,Total Nonfarm Employment,158003.0,2024,M07,July
+2024-07-01,CES3000000001,Manufacturing Employment,12840.0,2024,M07,July
+2024-07-01,CES6000000001,Professional & Business Services Employment,22623.0,2024,M07,July
+2024-08-01,CES0500000003,Average Hourly Earnings,35.23,2024,M08,August
+2024-08-01,CES3000000001,Manufacturing Employment,12800.0,2024,M08,August
+2024-08-01,CES7000000001,Leisure & Hospitality Employment,16818.0,2024,M08,August
+2024-08-01,LNS14000000,Unemployment Rate,4.2,2024,M08,August
+2024-08-01,CES0000000001,Total Nonfarm Employment,158074.0,2024,M08,August
+2024-08-01,LNS11300000,Labor Force Participation Rate,62.7,2024,M08,August
+2024-08-01,CES6000000001,Professional & Business Services Employment,22591.0,2024,M08,August
+2024-09-01,CES7000000001,Leisure & Hospitality Employment,16869.0,2024,M09,September
+2024-09-01,CES3000000001,Manufacturing Employment,12800.0,2024,M09,September
+2024-09-01,CES6000000001,Professional & Business Services Employment,22575.0,2024,M09,September
+2024-09-01,LNS14000000,Unemployment Rate,4.1,2024,M09,September
+2024-09-01,LNS11300000,Labor Force Participation Rate,62.7,2024,M09,September
+2024-09-01,CES0500000003,Average Hourly Earnings,35.33,2024,M09,September
+2024-09-01,CES0000000001,Total Nonfarm Employment,158314.0,2024,M09,September
+2024-10-01,CES0500000003,Average Hourly Earnings,35.48,2024,M10,October
+2024-10-01,LNS11300000,Labor Force Participation Rate,62.5,2024,M10,October
+2024-10-01,CES7000000001,Leisure & Hospitality Employment,16878.0,2024,M10,October
+2024-10-01,LNS14000000,Unemployment Rate,4.1,2024,M10,October
+2024-10-01,CES0000000001,Total Nonfarm Employment,158358.0,2024,M10,October
+2024-10-01,CES6000000001,Professional & Business Services Employment,22541.0,2024,M10,October
+2024-10-01,CES3000000001,Manufacturing Employment,12750.0,2024,M10,October
+2024-11-01,CES6000000001,Professional & Business Services Employment,22578.0,2024,M11,November
+2024-11-01,CES7000000001,Leisure & Hospitality Employment,16932.0,2024,M11,November
+2024-11-01,LNS14000000,Unemployment Rate,4.2,2024,M11,November
+2024-11-01,CES0000000001,Total Nonfarm Employment,158619.0,2024,M11,November
+2024-11-01,LNS11300000,Labor Force Participation Rate,62.5,2024,M11,November
+2024-11-01,CES0500000003,Average Hourly Earnings,35.61,2024,M11,November
+2024-11-01,CES3000000001,Manufacturing Employment,12770.0,2024,M11,November
+2024-12-01,CES6000000001,Professional & Business Services Employment,22614.0,2024,M12,December
+2024-12-01,CES7000000001,Leisure & Hospitality Employment,16979.0,2024,M12,December
+2024-12-01,CES3000000001,Manufacturing Employment,12760.0,2024,M12,December
+2024-12-01,CES0500000003,Average Hourly Earnings,35.68,2024,M12,December
+2024-12-01,LNS14000000,Unemployment Rate,4.1,2024,M12,December
+2024-12-01,LNS11300000,Labor Force Participation Rate,62.5,2024,M12,December
+2024-12-01,CES0000000001,Total Nonfarm Employment,158942.0,2024,M12,December
+2025-01-01,LNS11300000,Labor Force Participation Rate,62.6,2025,M01,January
+2025-01-01,CES3000000001,Manufacturing Employment,12755.0,2025,M01,January
+2025-01-01,CES7000000001,Leisure & Hospitality Employment,16965.0,2025,M01,January
+2025-01-01,CES6000000001,Professional & Business Services Employment,22579.0,2025,M01,January
+2025-01-01,CES0500000003,Average Hourly Earnings,35.83,2025,M01,January
+2025-01-01,LNS14000000,Unemployment Rate,4.0,2025,M01,January
+2025-01-01,CES0000000001,Total Nonfarm Employment,159053.0,2025,M01,January
+2025-02-01,CES3000000001,Manufacturing Employment,12763.0,2025,M02,February
+2025-02-01,CES0000000001,Total Nonfarm Employment,159155.0,2025,M02,February
+2025-02-01,CES0500000003,Average Hourly Earnings,35.9,2025,M02,February
+2025-02-01,CES6000000001,Professional & Business Services Employment,22594.0,2025,M02,February
+2025-02-01,CES7000000001,Leisure & Hospitality Employment,16931.0,2025,M02,February
+2025-02-01,LNS11300000,Labor Force Participation Rate,62.4,2025,M02,February
+2025-02-01,LNS14000000,Unemployment Rate,4.1,2025,M02,February
+2025-03-01,CES0000000001,Total Nonfarm Employment,159275.0,2025,M03,March
+2025-03-01,CES7000000001,Leisure & Hospitality Employment,16976.0,2025,M03,March
+2025-03-01,LNS11300000,Labor Force Participation Rate,62.5,2025,M03,March
+2025-03-01,CES3000000001,Manufacturing Employment,12764.0,2025,M03,March
+2025-03-01,LNS14000000,Unemployment Rate,4.2,2025,M03,March
+2025-03-01,CES6000000001,Professional & Business Services Employment,22583.0,2025,M03,March
+2025-03-01,CES0500000003,Average Hourly Earnings,36.02,2025,M03,March
+2025-04-01,CES6000000001,Professional & Business Services Employment,22610.0,2025,M04,April
+2025-04-01,CES0000000001,Total Nonfarm Employment,159433.0,2025,M04,April
+2025-04-01,CES7000000001,Leisure & Hospitality Employment,16994.0,2025,M04,April
+2025-04-01,LNS11300000,Labor Force Participation Rate,62.6,2025,M04,April
+2025-04-01,CES0500000003,Average Hourly Earnings,36.08,2025,M04,April
+2025-04-01,LNS14000000,Unemployment Rate,4.2,2025,M04,April
+2025-04-01,CES3000000001,Manufacturing Employment,12764.0,2025,M04,April
+2025-05-01,LNS14000000,Unemployment Rate,4.2,2025,M05,May
+2025-05-01,CES6000000001,Professional & Business Services Employment,22587.0,2025,M05,May
+2025-05-01,CES7000000001,Leisure & Hospitality Employment,17021.0,2025,M05,May
+2025-05-01,CES0500000003,Average Hourly Earnings,36.23,2025,M05,May
+2025-05-01,CES0000000001,Total Nonfarm Employment,159452.0,2025,M05,May
+2025-05-01,CES3000000001,Manufacturing Employment,12753.0,2025,M05,May
+2025-05-01,LNS11300000,Labor Force Participation Rate,62.4,2025,M05,May
+2025-06-01,CES0000000001,Total Nonfarm Employment,159439.0,2025,M06,June
+2025-06-01,CES6000000001,Professional & Business Services Employment,22563.0,2025,M06,June
+2025-06-01,LNS14000000,Unemployment Rate,4.1,2025,M06,June
+2025-06-01,CES7000000001,Leisure & Hospitality Employment,17016.0,2025,M06,June
+2025-06-01,CES0500000003,Average Hourly Earnings,36.31,2025,M06,June
+2025-06-01,CES3000000001,Manufacturing Employment,12736.0,2025,M06,June
+2025-06-01,LNS11300000,Labor Force Participation Rate,62.3,2025,M06,June
+2025-07-01,CES7000000001,Leisure & Hospitality Employment,17025.0,2025,M07,July
+2025-07-01,CES0000000001,Total Nonfarm Employment,159511.0,2025,M07,July
+2025-07-01,LNS11300000,Labor Force Participation Rate,62.2,2025,M07,July
+2025-07-01,LNS14000000,Unemployment Rate,4.2,2025,M07,July
+2025-07-01,CES3000000001,Manufacturing Employment,12727.0,2025,M07,July
+2025-07-01,CES0500000003,Average Hourly Earnings,36.43,2025,M07,July
+2025-07-01,CES6000000001,Professional & Business Services Employment,22550.0,2025,M07,July
+2025-08-01,LNS11300000,Labor Force Participation Rate,62.3,2025,M08,August
+2025-08-01,LNS14000000,Unemployment Rate,4.3,2025,M08,August
+2025-08-01,CES7000000001,Leisure & Hospitality Employment,17057.0,2025,M08,August
+2025-08-01,CES3000000001,Manufacturing Employment,12712.0,2025,M08,August
+2025-08-01,CES0500000003,Average Hourly Earnings,36.58,2025,M08,August
+2025-08-01,CES6000000001,Professional & Business Services Employment,22533.0,2025,M08,August
+2025-08-01,CES0000000001,Total Nonfarm Employment,159507.0,2025,M08,August
+2025-09-01,CES0500000003,Average Hourly Earnings,36.67,2025,M09,September
+2025-09-01,CES7000000001,Leisure & Hospitality Employment,17104.0,2025,M09,September
+2025-09-01,LNS11300000,Labor Force Participation Rate,62.4,2025,M09,September
+2025-09-01,CES3000000001,Manufacturing Employment,12706.0,2025,M09,September
+2025-09-01,LNS14000000,Unemployment Rate,4.4,2025,M09,September
+2025-09-01,CES6000000001,Professional & Business Services Employment,22513.0,2025,M09,September
+2025-09-01,CES0000000001,Total Nonfarm Employment,159626.0,2025,M09,September
