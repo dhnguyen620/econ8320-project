@@ -134,7 +134,25 @@ def main():
         
         # Series selector
         st.subheader("📈 Indicators")
-        all_series = sorted(df['series_name'].unique().tolist())
+        # Define the desired order
+        series_order = [
+            'Total Nonfarm Employment', 
+            'Unemployment Rate', 
+            'Labor Force Participation Rate', 
+            'Average Hourly Earnings',
+            'Manufacturing Employment', 
+            'Leisure & Hospitality Employment',
+            'Professional & Business Services Employment'
+        ]
+        
+        # Get all unique series from data
+        data_series = df['series_name'].unique().tolist()
+        
+        # Order them according to our preference
+        all_series = [s for s in series_order if s in data_series]
+        # Add any series not in our predefined order
+        all_series.extend([s for s in data_series if s not in series_order])
+        
         selected_series = st.multiselect(
             "Select Series to Display",
             options=all_series,
@@ -350,7 +368,7 @@ def main():
         # Add any remaining selected series that weren't in the predefined order
         for series in selected_series:
             if series not in ordered_series:
-                ordered_series.append(series)
+                ordered_series.append(series)s
 
         for series_name in selected_series:
             with st.expander(f"📈 {series_name}", expanded=(len(selected_series) <= 3)):
