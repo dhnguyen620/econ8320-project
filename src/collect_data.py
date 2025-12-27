@@ -215,3 +215,11 @@ def main():
         'date': ['min', 'max', 'count']
     })
     print
+
+    # Save the data
+    save_data(final_df, output_path)
+    
+    print("\n✓ Data collection complete!")
+
+if __name__ == "__main__":
+    main()

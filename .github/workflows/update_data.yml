@@ -25,6 +25,8 @@ jobs:
           pip install -r requirements.txt
       
       - name: Run data collection script
+        env:
+          BLS_API_KEY: 7b88692e4218dd6d9bc9242deac25484558697cd0f2efd1f9a8b27
         run: |
           python src/collect_data.py
       
@@ -33,4 +35,4 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/processed/labor_stats.csv
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update BLS data - $(date +'%Y-%m-%d')" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "📊 Update BLS data - $(date +'%Y-%m-%d')" && git push)

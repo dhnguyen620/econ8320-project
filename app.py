@@ -289,7 +289,7 @@ def main():
     st.markdown("---")
 
     # ===== KEY INDICATORS CHARTS SECTION =====
-    st.header("🎯 Key Indicators - Detailed View")
+    st.header("🎯 Key Indicators - Overview")
     
     # First row: Key indicators
     key_series = ['Total Nonfarm Employment', 'Unemployment Rate']
