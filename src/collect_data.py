@@ -3,6 +3,10 @@ import pandas as pd
 import os
 from datetime import datetime
 import time
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # BLS Series IDs
 SERIES_IDS = {
@@ -15,9 +19,16 @@ SERIES_IDS = {
     'Professional & Business Services Employment': 'CES6000000001'
 }
 
-def fetch_bls_data_single(series_id, start_year, end_year):
-    """Fetch data from BLS API for a single series (no API key needed)"""
-    url = 'https://api.bls.gov/publicAPI/v1/timeseries/data/'
+def fetch_bls_data_single(series_id, start_year, end_year, api_key=None):
+    """Fetch data from BLS API for a single series"""
+    
+    # Use v2 API if we have a key, otherwise v1
+    if api_key:
+        url = 'https://api.bls.gov/publicAPI/v2/timeseries/data/'
+        print(f"  Using API v2 with registration key")
+    else:
+        url = 'https://api.bls.gov/publicAPI/v1/timeseries/data/'
+        print(f"  Using API v1 (no key)")
     
     headers = {'Content-type': 'application/json'}
     
@@ -27,16 +38,25 @@ def fetch_bls_data_single(series_id, start_year, end_year):
         "endyear": str(end_year)
     }
     
+    # Add registration key if available
+    if api_key:
+        data["registrationkey"] = api_key
+    
     response = requests.post(url, json=data, headers=headers)
     
     if response.status_code != 200:
-        print(f"Error: API returned status code {response.status_code}")
+        print(f"  Error: API returned status code {response.status_code}")
         return None
     
     json_data = response.json()
     
     if json_data['status'] != 'REQUEST_SUCCEEDED':
-        print(f"Error: {json_data.get('message', 'Unknown error')}")
+        error_msg = json_data.get('message', ['Unknown error'])
+        print(f"  Error: {error_msg}")
+        # If key fails, try without it
+        if api_key:
+            print(f"  Registration key failed, falling back to v1 API without key")
+            return fetch_bls_data_single(series_id, start_year, end_year, api_key=None)
         return None
     
     return json_data
@@ -59,7 +79,7 @@ def parse_bls_data(json_data, series_id, series_name):
     
     return all_data
 
-def collect_all_series(series_dict, start_year, end_year):
+def collect_all_series(series_dict, start_year, end_year, api_key=None):
     """Collect data for all series one at a time"""
     all_data = []
     total_series = len(series_dict)
@@ -69,7 +89,7 @@ def collect_all_series(series_dict, start_year, end_year):
     for idx, (series_name, series_id) in enumerate(series_dict.items(), 1):
         print(f"[{idx}/{total_series}] Fetching: {series_name}...")
         
-        json_data = fetch_bls_data_single(series_id, start_year, end_year)
+        json_data = fetch_bls_data_single(series_id, start_year, end_year, api_key)
         
         if json_data:
             records = parse_bls_data(json_data, series_id, series_name)
@@ -147,6 +167,13 @@ def main():
     print("BLS Labor Statistics Data Collection")
     print("="*60)
     
+    # Try to load API key from environment
+    api_key = os.getenv('BLS_API_KEY')
+    if api_key:
+        print(f"✓ Found BLS API key in environment")
+    else:
+        print(f"⚠ No API key found - will use v1 API with rate limits")
+    
     # Load existing data
     existing_df = load_existing_data(output_path)
     
@@ -154,20 +181,19 @@ def main():
     current_year = datetime.now().year
     
     if existing_df.empty:
-        # First run - get last year of data
+        # First run - get data from 2020
         start_year = 2020
         print(f"First run: Collecting data from {start_year} to {current_year}")
     else:
         # Subsequent runs - only get current year
         latest_date = get_latest_date(existing_df)
-        start_year = latest_date.year if latest_date else current_year - 1
+        start_year = latest_date.year if latest_date else 2020
         print(f"Update run: Collecting data from {start_year} to {current_year}")
     
-    print(f"Using BLS API v1 (no registration key)")
     print("="*60 + "\n")
     
     # Collect new data
-    all_records = collect_all_series(SERIES_IDS, start_year, current_year)
+    all_records = collect_all_series(SERIES_IDS, start_year, current_year, api_key)
     
     if not all_records:
         print("\n❌ No data collected. Exiting.")
@@ -188,12 +214,4 @@ def main():
     summary = final_df.groupby('series_name').agg({
         'date': ['min', 'max', 'count']
     })
-    print(summary)
-    
-    # Save data
-    save_data(final_df, output_path)
-    
-    print("\n✅ Data collection completed successfully!")
-
-if __name__ == "__main__":
-    main()
+    print
