@@ -4,6 +4,21 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
 
+# ===== COLOR SCHEME FOR EACH SERIES =====
+SERIES_COLORS = {
+    'Total Nonfarm Employment': '#1f77b4',      # Blue
+    'Unemployment Rate': '#ff7f0e',             # Orange
+    'Labor Force Participation Rate': '#2ca02c', # Green
+    'Average Hourly Earnings': '#d62728',       # Red
+    'Manufacturing Employment': '#9467bd',      # Purple
+    'Leisure & Hospitality Employment': '#8c564b', # Brown
+    'Professional & Business Services Employment': '#e377c2' # Pink
+}
+
+def get_series_color(series_name):
+    """Get color for a series, default to blue if not found"""
+    return SERIES_COLORS.get(series_name, '#1f77b4')
+
 # ===== PAGE CONFIGURATION =====
 st.set_page_config(
     page_title="US Labor Statistics Dashboard",
@@ -100,7 +115,6 @@ def main():
     
     # ===== SIDEBAR FILTERS =====
     with st.sidebar:
-        st.image("https://www.bls.gov/images/bls_emblem.png", width=100)  # Optional BLS logo
         st.header("🎛️ Dashboard Controls")
         
         # Date range filter
@@ -149,9 +163,8 @@ def main():
         # GitHub link
         st.markdown("""
             <div style='text-align: center; margin-top: 2rem;'>
-                <a href='https://github.com/dhnguyen620/econ8320-project' target='_blank'>
-                    <img src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' width='30'>
-                    <br>View on GitHub
+                <a href='https://github.com/dhnguyen620/econ8320-project' target='_blank' style='text-decoration: none; color: #333;'>
+                    <strong>📂 View on GitHub</strong>
                 </a>
             </div>
         """, unsafe_allow_html=True)
@@ -177,12 +190,32 @@ def main():
     
     latest_data = filtered_df.sort_values('date').groupby('series_name').tail(1)
     
-    # Create metrics in rows of 4
-    metrics_per_row = 4
-    for i in range(0, len(latest_data), metrics_per_row):
-        cols = st.columns(metrics_per_row)
+    # Define priority order
+    priority_series = [
+        'Total Nonfarm Employment',
+        'Unemployment Rate'
+    ]
+    
+    # Separate priority and other series
+    priority_data = latest_data[latest_data['series_name'].isin(priority_series)]
+    other_data = latest_data[~latest_data['series_name'].isin(priority_series)]
+    
+    # Sort priority data to maintain order
+    priority_data_list = []
+    for series_name in priority_series:
+        series_row = priority_data[priority_data['series_name'] == series_name]
+        if len(series_row) > 0:
+            priority_data_list.append(series_row)
+    
+    if priority_data_list:
+        priority_data = pd.concat(priority_data_list)
+    
+    # Display priority metrics first (2 columns)
+    if len(priority_data) > 0:
+        st.subheader("🎯 Key Indicators")
+        cols = st.columns(2)
         
-        for idx, (_, row) in enumerate(list(latest_data.iterrows())[i:i+metrics_per_row]):
+        for idx, (_, row) in enumerate(priority_data.iterrows()):
             with cols[idx]:
                 series_data = filtered_df[
                     filtered_df['series_name'] == row['series_name']
@@ -204,6 +237,36 @@ def main():
                         label=row['series_name'],
                         value=f"{row['value']:,.1f}"
                     )
+    
+    # Display other metrics (4 columns)
+    if len(other_data) > 0:
+        st.subheader("📈 Additional Indicators")
+        metrics_per_row = 4
+        for i in range(0, len(other_data), metrics_per_row):
+            cols = st.columns(metrics_per_row)
+            
+            for idx, (_, row) in enumerate(list(other_data.iterrows())[i:i+metrics_per_row]):
+                with cols[idx]:
+                    series_data = filtered_df[
+                        filtered_df['series_name'] == row['series_name']
+                    ].sort_values('date')
+                    
+                    if len(series_data) >= 2:
+                        prev_value = series_data.iloc[-2]['value']
+                        change = row['value'] - prev_value
+                        change_pct = (change / prev_value) * 100 if prev_value != 0 else 0
+                        
+                        st.metric(
+                            label=row['series_name'],
+                            value=f"{row['value']:,.1f}",
+                            delta=f"{change_pct:+.2f}%",
+                            help=f"Change: {change:+,.1f}"
+                        )
+                    else:
+                        st.metric(
+                            label=row['series_name'],
+                            value=f"{row['value']:,.1f}"
+                        )
     
     st.markdown("---")
     
@@ -239,7 +302,7 @@ def main():
                     )
                     
                     fig.update_traces(
-                        line_color='#1f77b4',
+                        line_color=get_series_color(series_name),
                         line_width=2,
                         hovertemplate='<b>%{x|%b %Y}</b><br>Value: %{y:,.2f}<extra></extra>'
                     )
@@ -267,9 +330,7 @@ def main():
         if len(selected_series) > 1:
             fig = go.Figure()
             
-            colors = px.colors.qualitative.Set2
-            
-            for idx, series_name in enumerate(selected_series):
+            for series_name in selected_series:
                 series_data = filtered_df[
                     filtered_df['series_name'] == series_name
                 ].sort_values('date')
@@ -279,7 +340,7 @@ def main():
                     y=series_data['value'],
                     name=series_name,
                     mode='lines+markers',
-                    line=dict(width=2, color=colors[idx % len(colors)]),
+                    line=dict(width=2, color=get_series_color(series_name)),
                     marker=dict(size=4),
                     hovertemplate='<b>%{fullData.name}</b><br>%{x|%b %Y}<br>Value: %{y:,.2f}<extra></extra>'
                 ))
@@ -322,23 +383,30 @@ def main():
         if change_data:
             combined_change = pd.concat(change_data)
             
-            fig = px.line(
-                combined_change.dropna(subset=['pct_change']),
-                x='date',
-                y='pct_change',
-                color='series_name',
-                title="Month-over-Month Percentage Change",
-                labels={
-                    'pct_change': 'Change (%)', 
-                    'date': 'Date', 
-                    'series_name': 'Indicator'
-                },
-                template='plotly_white'
-            )
+            fig = go.Figure()
+            
+            for series_name in selected_series:
+                series_change = combined_change[
+                    combined_change['series_name'] == series_name
+                ].dropna(subset=['pct_change'])
+                
+                fig.add_trace(go.Scatter(
+                    x=series_change['date'],
+                    y=series_change['pct_change'],
+                    name=series_name,
+                    mode='lines+markers',
+                    line=dict(width=2, color=get_series_color(series_name)),
+                    marker=dict(size=4),
+                    hovertemplate='<b>%{fullData.name}</b><br>%{x|%b %Y}<br>Change: %{y:.2f}%<extra></extra>'
+                ))
             
             fig.update_layout(
-                height=500,
+                title="Month-over-Month Percentage Change",
+                xaxis_title="Date",
+                yaxis_title="Change (%)",
                 hovermode='x unified',
+                height=500,
+                template='plotly_white',
                 legend=dict(
                     orientation="h",
                     yanchor="bottom",
