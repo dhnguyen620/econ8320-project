@@ -368,7 +368,7 @@ def main():
         # Add any remaining selected series that weren't in the predefined order
         for series in selected_series:
             if series not in ordered_series:
-                ordered_series.append(series)s
+                ordered_series.append(series)
 
         for series_name in selected_series:
             with st.expander(f"📈 {series_name}", expanded=(len(selected_series) <= 3)):
