@@ -269,6 +269,48 @@ def main():
                         )
     
     st.markdown("---")
+
+    # ===== KEY INDICATORS CHARTS SECTION =====
+    st.header("🎯 Key Indicators - Detailed View")
+    
+    key_series = ['Total Nonfarm Employment', 'Unemployment Rate']
+    available_key_series = [s for s in key_series if s in selected_series]
+    
+    if available_key_series:
+        cols = st.columns(len(available_key_series))
+        
+        for idx, series_name in enumerate(available_key_series):
+            with cols[idx]:
+                series_data = filtered_df[
+                    filtered_df['series_name'] == series_name
+                ].sort_values('date')
+                
+                if len(series_data) > 0:
+                    fig = px.line(
+                        series_data,
+                        x='date',
+                        y='value',
+                        title=series_name,
+                        labels={'value': 'Value', 'date': 'Date'},
+                        template='plotly_white'
+                    )
+                    
+                    fig.update_traces(
+                        line_color=get_series_color(series_name),
+                        line_width=3,
+                        hovertemplate='<b>%{x|%b %Y}</b><br>Value: %{y:,.2f}<extra></extra>'
+                    )
+                    
+                    fig.update_layout(
+                        height=350,
+                        hovermode='x unified',
+                        margin=dict(l=20, r=20, t=40, b=20),
+                        title_font_size=14
+                    )
+                    
+                    st.plotly_chart(fig, use_container_width=True)
+    
+    st.markdown("---")
     
     # ===== TABBED VISUALIZATION SECTION =====
     st.header("📈 Detailed Analysis")
