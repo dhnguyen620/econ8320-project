@@ -341,12 +341,17 @@ def main():
             'Professional & Business Services Employment'
         ]
         
-        # Filter to only include selected series in the specified order
-        ordered_series = [s for s in series_order if s in selected_series]
-        # Add any selected series not in the predefined order at the end
-        remaining_series = [s for s in selected_series if s not in series_order]
-        ordered_series.extend(remaining_series)
+        # Create ordered list based on selected series
+        ordered_series = []
+        for series in series_order:
+            if series in selected_series:
+                ordered_series.append(series)
         
+        # Add any remaining selected series that weren't in the predefined order
+        for series in selected_series:
+            if series not in ordered_series:
+                ordered_series.append(series)
+
         for series_name in selected_series:
             with st.expander(f"📈 {series_name}", expanded=(len(selected_series) <= 3)):
                 series_data = filtered_df[
