@@ -330,6 +330,23 @@ def main():
         st.markdown("### Time Series Analysis")
         st.markdown("*Explore each indicator's trend over time*")
         
+        # Define desired order
+        series_order = [
+            'Total Nonfarm Employment', 
+            'Unemployment Rate', 
+            'Labor Force Participation Rate', 
+            'Average Hourly Earnings',
+            'Manufacturing Employment', 
+            'Leisure & Hospitality Employment',
+            'Professional & Business Services Employment'
+        ]
+        
+        # Filter to only include selected series in the specified order
+        ordered_series = [s for s in series_order if s in selected_series]
+        # Add any selected series not in the predefined order at the end
+        remaining_series = [s for s in selected_series if s not in series_order]
+        ordered_series.extend(remaining_series)
+        
         for series_name in selected_series:
             with st.expander(f"📈 {series_name}", expanded=(len(selected_series) <= 3)):
                 series_data = filtered_df[
