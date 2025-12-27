@@ -271,9 +271,12 @@ def main():
     st.markdown("---")
 
     # ===== KEY INDICATORS CHARTS SECTION =====
-    st.header("🎯 Key Indicators - Detailed View")
+    st.header("🎯 Key Indicators - Overview")
     
-    key_series = ['Total Nonfarm Employment', 'Unemployment Rate']
+    key_series = ['Total Nonfarm Employment', 'Unemployment Rate', 
+                  'Labor Force Participation Rate', 'Average Hourly Earnings',
+                  'Manufacturing Employment', 'Leisure & Hospitality Employment',
+                  'Professional & Business Services Employment']
     available_key_series = [s for s in key_series if s in selected_series]
     
     if available_key_series:
