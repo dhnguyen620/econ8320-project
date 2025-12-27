@@ -289,19 +289,18 @@ def main():
     st.markdown("---")
 
     # ===== KEY INDICATORS CHARTS SECTION =====
-    st.header("🎯 Key Indicators - Overview")
+    st.header("🎯 Key Indicators - Detailed View")
     
-    key_series = ['Total Nonfarm Employment', 'Unemployment Rate', 
-                  'Labor Force Participation Rate', 'Average Hourly Earnings',
-                  'Manufacturing Employment', 'Leisure & Hospitality Employment',
-                  'Professional & Business Services Employment']
+    # First row: Key indicators
+    key_series = ['Total Nonfarm Employment', 'Unemployment Rate']
     available_key_series = [s for s in key_series if s in selected_series]
     
     if available_key_series:
-        cols = st.columns(2)
-        
-        for idx, series_name in enumerate(available_key_series):
-            with cols[idx]:
+        if len(available_key_series) == 1:
+            # Only one key series, center it
+            col1, col2, col3 = st.columns([1, 2, 1])
+            with col2:
+                series_name = available_key_series[0]
                 series_data = filtered_df[
                     filtered_df['series_name'] == series_name
                 ].sort_values('date')
@@ -330,15 +329,11 @@ def main():
                     )
                     
                     st.plotly_chart(fig, use_container_width=True)
-    
-         # Remaining series (2 per row)
-    remaining_series = [s for s in selected_series if s not in key_series]
-    
-    if remaining_series:
-        for i in range(0, len(remaining_series), 2):
+        else:
+            # Two key series
             cols = st.columns(2)
             
-            for idx, series_name in enumerate(remaining_series[i:i+2]):
+            for idx, series_name in enumerate(available_key_series):
                 with cols[idx]:
                     series_data = filtered_df[
                         filtered_df['series_name'] == series_name
@@ -368,6 +363,53 @@ def main():
                         )
                         
                         st.plotly_chart(fig, use_container_width=True)
+    
+    # Remaining series (2 per row)
+    remaining_series = [s for s in selected_series if s not in key_series]
+    
+    if remaining_series:
+        for i in range(0, len(remaining_series), 2):
+            # Get the series for this row
+            row_series = remaining_series[i:i+2]
+            
+            # Create columns based on number of series in this row
+            if len(row_series) == 1:
+                col1, col2, col3 = st.columns([1, 2, 1])
+                cols_to_use = [col2]
+            else:
+                cols_to_use = st.columns(2)
+            
+            for idx, series_name in enumerate(row_series):
+                with cols_to_use[idx]:
+                    series_data = filtered_df[
+                        filtered_df['series_name'] == series_name
+                    ].sort_values('date')
+                    
+                    if len(series_data) > 0:
+                        fig = px.line(
+                            series_data,
+                            x='date',
+                            y='value',
+                            title=series_name,
+                            labels={'value': 'Value', 'date': 'Date'},
+                            template='plotly_white'
+                        )
+                        
+                        fig.update_traces(
+                            line_color=get_series_color(series_name),
+                            line_width=3,
+                            hovertemplate='<b>%{x|%b %Y}</b><br>Value: %{y:,.2f}<extra></extra>'
+                        )
+                        
+                        fig.update_layout(
+                            height=350,
+                            hovermode='x unified',
+                            margin=dict(l=20, r=20, t=40, b=20),
+                            title_font_size=14
+                        )
+                        
+                        st.plotly_chart(fig, use_container_width=True)
+    
     st.markdown("---")
     
     # ===== TABBED VISUALIZATION SECTION =====
